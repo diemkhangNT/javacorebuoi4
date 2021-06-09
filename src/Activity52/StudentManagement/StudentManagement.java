@@ -31,8 +31,14 @@ public class StudentManagement{
         int count = 0;
         for(int i=0;i<n;i++){
             if(check){
-                count += (students[i].passTest() ? 1 :0); // tổng số sinh viên đỗ.
-            }else count += (students[i].passTest() ? 0: 1);// tổng số sinh viên trượt.
+                if(students[i].passTest()){
+                    count++;// tổng số sinh viên đỗ.
+                }
+            }else {
+                if(!students[i].passTest()){
+                    count++;// tổng số sinh viên trượt.
+                }
+            }
         }
         return count;
     }
