@@ -18,6 +18,5 @@ public class Test {
         System.out.println("Dien tich = "+ rect.acreage());
         rect.printInfo();
         System.out.print("Ket qua la hinh vuong: "+rect.testSquare());
-
     }
 }
