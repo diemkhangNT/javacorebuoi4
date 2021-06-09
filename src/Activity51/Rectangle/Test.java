@@ -9,14 +9,15 @@ public class Test {
         Rectangle rect = new Rectangle();
         Scanner input = new Scanner(System.in);
         System.out.print("Enter width: ");
-        rect.width = input.nextInt();
+        int width = input.nextInt();
+        rect.setWidth(width);
         System.out.print("Enter height: ");
-        rect.height = input.nextInt();
-
-        System.out.println("Chu vi = "+(double)rect.perimeter());
-        System.out.println("Dien tich = "+(int)rect.acreage());
+        int height = input.nextInt();
+        rect.setHeight(height);
+        System.out.println("Chu vi = "+ rect.perimeter());
+        System.out.println("Dien tich = "+ rect.acreage());
         rect.printInfo();
-        System.out.print("Ket qua la hinh vuong: "+(boolean)rect.testSquare());
+        System.out.print("Ket qua la hinh vuong: "+rect.testSquare());
 
     }
 }

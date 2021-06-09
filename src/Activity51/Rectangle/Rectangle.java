@@ -1,8 +1,8 @@
 package Activity51.Rectangle;
 
 public class Rectangle {
-    public int width;
-    public int height;
+    private int width;
+    private int height;
     //  Khởi tạo
     public Rectangle(){}
     public Rectangle(int width, int height){
@@ -27,9 +27,9 @@ public class Rectangle {
         return height;
     }
     // Tính chu vi
-    public double perimeter(){
-        return (double) (width+height)/2;
-    }
+    public int perimeter(){
+        return (width+height)*2;
+}
     // Tính diện tích
     public int acreage(){
         return width*height;
