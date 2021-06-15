@@ -32,7 +32,7 @@ public class Student {
             return false;
     }
     public void printInfo(){
-        System.out.println("Student: '"+name+"' has GPA = "+gpa);
+        System.out.println("Student: '"+name+"' has GPA = "+(float)gpa);
     }
 
 //    public String toString(){
