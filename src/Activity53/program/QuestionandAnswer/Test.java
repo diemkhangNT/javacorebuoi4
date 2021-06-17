@@ -5,8 +5,9 @@ import Activity52.StudentManagement.cach2.Student;
 import java.util.Scanner;
 
 public class Test {
-    private Question[] questions;
-    public Test(){
+    public static void main(String[] args) {
+        Test test = new Test();
+         Question[] questions;
         Scanner input = new Scanner(System.in);
         System.out.print("Nhap vao so cau hoi: ");
         int n = input.nextInt();
@@ -55,23 +56,19 @@ public class Test {
         // Hiển thị ra số câu trả lời đúng và đáp án đúng của từng câu hỏi.
         for (int i = 0; i < questions.length; i++) {
             if (dokho == questions[i].getLevel()) {
-                j += 1;
+                j++; // Số câu hỏi cần hiển thị tăng 1
                 System.out.println("- Question " + (i + 1) + ":");
-                char c = dapan.charAt(i * 2);
-                System.out.println("     Your Answer: " + c);
-                char out = questions[i].getCorrect().charAt(0);
+                char c = dapan.charAt(i * 2); // Đáp án user tương ứng với vị trí câu hỏi đó
+                System.out.println("\t Your Answer: " + c);
+                char out = questions[i].getCorrect().charAt(0); // Đổi kiểu đáp án đúng
                 if (c == out) {
                     questions[i].answerCorrect(true);
-                    k++;
+                    k++; // Số câu trả lời đúng + 1
                 } else questions[i].answerCorrect(false);
-                System.out.println("     Answer correct: " + questions[i].getCorrect());
+                System.out.println("\t Answer correct: " + questions[i].getCorrect());
             }
         }
         System.out.println();
-        System.out.println("" + questionManagement.score(k, j));
-
-    }
-    public static void main(String[] args) {
-        Test test = new Test();
+        System.out.println(questionManagement.score(k, j));
     }
 }

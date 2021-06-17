@@ -11,7 +11,7 @@ public class QuestionManagement {
     }
     // Tính điểm
     public String score(int k, int j){
-        return  "Ban tra loi duoc: "+k+"/"+j+" cau o cap do nay!";
+        return  "Bạn trả lời được: "+k+"/"+j+" câu ở cấp độ này!";
     }
     // Kiểm tra độ khó
     public int find(int dokho){
@@ -28,7 +28,6 @@ public class QuestionManagement {
         }
         if (j== questions.length){
             System.out.println("+ Rất tiếc. Độ khó bạn chọn không có trong câu hỏi nào!");
-            questions = new Question[0];
         }
         return dokho;
     }
