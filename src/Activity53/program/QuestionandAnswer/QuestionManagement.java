@@ -1,5 +1,7 @@
 package Activity53.program.QuestionandAnswer;
 
+import java.util.Scanner;
+
 public class QuestionManagement {
     // Danh sách các câu hỏi
     private Question[] questions;
@@ -26,8 +28,18 @@ public class QuestionManagement {
                 System.out.println("            D. " + questions[i].getAnswer4());
             }else j++;
         }
-        if (j== questions.length){
+        if (j == questions.length){
             System.out.println("+ Rất tiếc. Độ khó bạn chọn không có trong câu hỏi nào!");
+            System.out.println("Muốn tiếp tục hãy run lại chương trình!");
+            System.exit(0);
+            /*System.out.println("Bạn có muốn chọn lại độ khó? (Y/N)");
+            Scanner input = new Scanner(System.in);
+            char c = input.nextLine().toUpperCase().charAt(0);
+            if(c == 'Y'){
+                System.out.print("Nhập lại độ khó bạn muốn test (1-3): ");
+                int level = input.nextInt();
+                find(level);
+            }else System.exit(0);*/
         }
         return dokho;
     }
